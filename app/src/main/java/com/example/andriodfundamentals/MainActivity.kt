@@ -23,6 +23,7 @@ import com.example.andriodfundamentals.ui.screens.WelcomeScreen
 import com.example.andriodfundamentals.ui.theme.AndriodFundamentalsTheme
 import com.example.andriodfundamentals.ui.screens.HospitalRegistrationScreen
 import com.example.andriodfundamentals.ui.screens.ProductDetailScreen
+import com.example.andriodfundamentals.ui.screens.TravelDestinationScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +40,8 @@ class MainActivity : ComponentActivity() {
 //                ButtonStylingScreen()
 //                LoginScreen()
 //                HospitalRegistrationScreen()
-                ProductDetailScreen()
+//                ProductDetailScreen()
+                TravelDestinationScreen()
             }
         }
     }
