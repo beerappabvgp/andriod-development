@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.andriodfundamentals.ui.screens.BusinessCardScreen
 import com.example.andriodfundamentals.ui.screens.ButtonStylingScreen
+import com.example.andriodfundamentals.ui.screens.CounterScreen
 import com.example.andriodfundamentals.ui.screens.EmployeeDashBoardScreen
 import com.example.andriodfundamentals.ui.screens.HelpCenterScreen
 import com.example.andriodfundamentals.ui.screens.LoginScreen
@@ -41,7 +42,8 @@ class MainActivity : ComponentActivity() {
 //                LoginScreen()
 //                HospitalRegistrationScreen()
 //                ProductDetailScreen()
-                TravelDestinationScreen()
+//                TravelDestinationScreen()
+                CounterScreen()
             }
         }
     }
