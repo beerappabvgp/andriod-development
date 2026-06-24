@@ -23,6 +23,8 @@ import com.example.andriodfundamentals.ui.screens.StudentRegistrationScreen
 import com.example.andriodfundamentals.ui.screens.WelcomeScreen
 import com.example.andriodfundamentals.ui.theme.AndriodFundamentalsTheme
 import com.example.andriodfundamentals.ui.screens.HospitalRegistrationScreen
+import com.example.andriodfundamentals.ui.screens.LikeButtonScreen
+import com.example.andriodfundamentals.ui.screens.LiveFormScreen
 import com.example.andriodfundamentals.ui.screens.ProductDetailScreen
 import com.example.andriodfundamentals.ui.screens.TravelDestinationScreen
 
@@ -43,7 +45,9 @@ class MainActivity : ComponentActivity() {
 //                HospitalRegistrationScreen()
 //                ProductDetailScreen()
 //                TravelDestinationScreen()
-                CounterScreen()
+//                CounterScreen()
+//                LikeButtonScreen()
+                LiveFormScreen()
             }
         }
     }
