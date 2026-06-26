@@ -355,7 +355,8 @@ fun LiveFormScreen() {
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = "A",
+                        text = if (name.isNotEmpty()) name.first()
+                            .uppercase() else "?",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.ExtraBold,
                         color = Color.White
@@ -364,20 +365,20 @@ fun LiveFormScreen() {
 
                 Column() {
                     Text(
-                        text = name,
+                        text = if (name.isNotEmpty()) name else "Your Name",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.ExtraBold,
                         color = Color.White
                     )
                     Text(
-                        text = role,
+                        text = if (role.isNotEmpty()) role else "Your role",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.ExtraBold,
                         color = Color.White
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = email,
+                        text = if (email.isNotEmpty()) email else "Your@gmail.com",
                         fontSize = 18.sp,
                         color = Color.White.copy(alpha = 0.60f)
                     )

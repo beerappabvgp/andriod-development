@@ -1,5 +1,6 @@
 package com.example.andriodfundamentals
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,6 +17,7 @@ import com.example.andriodfundamentals.ui.screens.ButtonStylingScreen
 import com.example.andriodfundamentals.ui.screens.CounterScreen
 import com.example.andriodfundamentals.ui.screens.EmployeeDashBoardScreen
 import com.example.andriodfundamentals.ui.screens.HelpCenterScreen
+import com.example.andriodfundamentals.ui.screens.HomeScreen
 import com.example.andriodfundamentals.ui.screens.LoginScreen
 import com.example.andriodfundamentals.ui.screens.ProfileScreen
 import com.example.andriodfundamentals.ui.screens.RestaurantInfoScreen
@@ -26,6 +28,7 @@ import com.example.andriodfundamentals.ui.screens.HospitalRegistrationScreen
 import com.example.andriodfundamentals.ui.screens.LikeButtonScreen
 import com.example.andriodfundamentals.ui.screens.LiveFormScreen
 import com.example.andriodfundamentals.ui.screens.ProductDetailScreen
+import com.example.andriodfundamentals.ui.screens.StudentFormScreen
 import com.example.andriodfundamentals.ui.screens.TravelDestinationScreen
 
 class MainActivity : ComponentActivity() {
@@ -47,9 +50,42 @@ class MainActivity : ComponentActivity() {
 //                TravelDestinationScreen()
 //                CounterScreen()
 //                LikeButtonScreen()
-                LiveFormScreen()
+//                LiveFormScreen()
+//                HomeScreen(
+//                    onNavigateToSecond = {
+//                        navigateToSecond()
+//                    }
+//                )
+//                DetailScreen()
+                StudentFormScreen(
+                    onSubmittedClicked = { studentName, studentCourse ->
+                        navigateToStudentProfile(
+                            studentName, studentCourse
+                        )
+                    }
+                )
             }
         }
+    }
+
+    companion object {
+        const val EXTRA_STUDENT_NAME = "com.example.test.EXTRA_STUDENT_NAME"
+        const val EXTRA_STUDENT_COURSE = "com.example.test.EXTRA_STUDENT_COURSE"
+    }
+
+    private fun navigateToStudentProfile(studentName: String, studentCourse: String) {
+        val intent = Intent(
+            this, StudentProfileActivity::class.java
+        ).apply {
+            putExtra(EXTRA_STUDENT_NAME, studentName)
+            putExtra(EXTRA_STUDENT_COURSE, studentCourse)
+        }
+        startActivity(intent)
+    }
+
+    private fun navigateToSecond() {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }
 
